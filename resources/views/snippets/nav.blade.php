@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="{{ route('admin') }}">Import CSV</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Logout</a>
