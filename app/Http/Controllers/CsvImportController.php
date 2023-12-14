@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Csv;
+use App\Models\Importcsv;
 use Illuminate\Http\Request;
 use League\Csv\Reader;
 
@@ -39,15 +40,19 @@ class CsvImportController extends Controller
         $csv->setHeaderOffset(0);
 
         foreach ($csv as $row) {
-            $existingRecord = Csv::where('email', $row['email'])->first();
+            $existingRecord = Importcsv::where('email', $row['email'])->first();
             if (!$existingRecord) {
-                Csv::create([
+                Importcsv::create([
                     //'id' => $row['id'], // if you want to import id as well
                     'name' => $row['name'],
                     'email' => $row['email'],
                     'phone' => $row['phone'],
                     'address' => $row['address'],
                 ]);
+            }
+
+            else {
+                return redirect()->back()->with(['error' => 'Sorry, We found a duplicate in your record!']);
             }
         }
 

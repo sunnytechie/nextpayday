@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Csv;
+use App\Models\Importcsv;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -16,7 +19,8 @@ class DashboardController extends Controller
 
     public function admin()
     {
-        return view('dashboard.admin');
+        $records = Importcsv::orderBy('id', 'DESC')->get();
+        return view('dashboard.admin', compact('records'));
     }
 
     public function user()

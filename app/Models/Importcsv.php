@@ -5,9 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Csv extends Model
+class Importcsv extends Model
 {
-    protected $table = 'csv';
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'address',
+    ];
 
     use HasFactory;
 }

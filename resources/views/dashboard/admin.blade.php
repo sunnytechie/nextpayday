@@ -60,7 +60,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Add table rows here -->
+                                @foreach ($records as $record)
+                                    <tr>
+                                        <td>{{ $record->name }}</td>
+                                        <td>{{ $record->email }}</td>
+                                        <td>{{ $record->phone }}</td>
+                                        <td>{{ $record->address }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
