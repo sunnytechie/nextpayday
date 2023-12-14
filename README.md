@@ -2,7 +2,7 @@
 
 ### Assignment
 
-- Create Authentication for Admins
+- Create Authentication
 - Import CSV records into Database
 - Read data from an API and populate the database
 - Exception handling
@@ -26,6 +26,10 @@
 
 
 ```bash
+composer update
+
+php artisan migrate
+
 php artisan db:seed
 
 php artisan app:sync-api-data 
