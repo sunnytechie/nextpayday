@@ -9,6 +9,14 @@
 - Create Jobs
 
 Kindly follow the instructions below to install the laravel code
+Login details after seeder
+            'name' => 'admin',
+            'email' => 'admin@nextpayday.co',
+            'password' => Hash::make('admin123'),
+
+            'name' => 'user',
+            'email' => 'user@nextpayday.co',
+            'password' => Hash::make('user123'),
 
 ### Installation guide
 
@@ -18,16 +26,6 @@ Kindly follow the instructions below to install the laravel code
 php artisan db:seed
 
 
-            'name' => 'admin',
-            'email' => 'admin@nextpayday.co',
-            'password' => Hash::make('admin123'),
-
-            'name' => 'user',
-            'email' => 'user@nextpayday.co',
-            'password' => Hash::make('user123'),
-
-
 #### API Sync Data to database table
 
-```bash
 php artisan app:sync-api-data 
