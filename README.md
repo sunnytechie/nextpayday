@@ -8,8 +8,7 @@
 - Exception handling
 - Create Jobs
 
-#####Kindly follow the instructions below to install the laravel code
-######Login details after seeder
+<p>Login details after seeder</p>
 
             'name' => 'admin',
             'email' => 'admin@nextpayday.co',
