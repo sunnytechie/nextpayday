@@ -16,12 +16,12 @@ class DashboardController extends Controller
 
     public function admin()
     {
-        print "Admin dashboard";
+        return view('dashboard.admin');
     }
 
     public function user()
     {
-        print "User dashboard";
+        return view('dashboard.user');
     }
 
     /**
