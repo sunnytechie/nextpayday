@@ -8,8 +8,9 @@
 - Exception handling
 - Create Jobs
 
-Kindly follow the instructions below to install the laravel code
-Login details after seeder
+#####Kindly follow the instructions below to install the laravel code
+######Login details after seeder
+
             'name' => 'admin',
             'email' => 'admin@nextpayday.co',
             'password' => Hash::make('admin123'),
@@ -22,10 +23,10 @@ Login details after seeder
 
 #### Seeder User details to login as admin or User
 
+#### API Sync Data to database table
+
+
 ```bash
 php artisan db:seed
-
-
-#### API Sync Data to database table
 
 php artisan app:sync-api-data 
