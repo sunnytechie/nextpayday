@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Apirecord;
 use App\Models\Csv;
 use App\Models\Importcsv;
 use App\Models\User;
@@ -26,6 +27,12 @@ class DashboardController extends Controller
     public function user()
     {
         return view('dashboard.user');
+    }
+
+    public function apiRecords()
+    {
+        $records = Apirecord::orderBy('id', 'DESC')->paginate(10);
+        return view('dashboard.apirecords', compact('records'));
     }
 
     /**

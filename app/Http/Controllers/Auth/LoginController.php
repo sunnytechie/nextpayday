@@ -7,6 +7,7 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -34,7 +35,9 @@ class LoginController extends Controller
 
         //dd($user);
 
-        return response()->json(['message' => 'Authentication successful']);
+        //return response()->json(['message' => 'Authentication successful']);
+
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 }
 
