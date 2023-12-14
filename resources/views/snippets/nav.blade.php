@@ -9,13 +9,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('api.records') }}">API Records</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin') }}">Import CSV</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+                <a class="nav-link" href="{{ route('api.records') }}">API Records</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('jobs') }}">Jobs</a>
+            </li>
+            <li class="nav-item">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                </form>
             </li>
         </ul>
     </div>

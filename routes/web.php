@@ -6,6 +6,7 @@ use App\Http\Controllers\CsvImportController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ExceptionsController;
+use App\Http\Controllers\JobController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,10 @@ Route::get('/user-dashboard', [DashboardController::class, 'user'])->name('user'
 Route::post('/import-csv', [CsvImportController::class, 'store'])->name('import.csv')->middleware('auth', 'is_user');
 
 Route::get('/api-records', [DashboardController::class, 'apiRecords'])->name('api.records')->middleware('auth', 'is_admin');
+
+//jobs
+Route::get('/jobs', [JobController::class, 'index'])->name('jobs')->middleware('auth', 'is_admin');
+Route::post('/jobs/send-email-to-active-users', [JobController::class, 'sendEmailToActiveUsers'])->name('jobs.send.email.to.active.users')->middleware('auth', 'is_admin');
 
 //Exception Handling
 Route::get('/404', [ExceptionsController::class, 'notFound'])->name('404');
