@@ -26,6 +26,8 @@ Route::get('/user-dashboard', [DashboardController::class, 'user'])->name('user'
 
 Route::post('/import-csv', [CsvImportController::class, 'store'])->name('import.csv')->middleware('auth', 'is_user');
 
+Route::get('/api-records', [DashboardController::class, 'apiRecords'])->name('api.records')->middleware('auth', 'is_admin');
+
 //Route::middleware('auth')->group(function () {
 //    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
