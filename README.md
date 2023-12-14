@@ -13,7 +13,9 @@ Kindly follow the instructions below to install the laravel code
 ### Installation guide
 
 #### Seeder User details to login as admin or User
-- Run: php artisan db:seed
+
+php artisan db:seed
+
             'name' => 'admin',
             'email' => 'admin@nextpayday.co',
             'password' => Hash::make('admin123'),
@@ -23,4 +25,5 @@ Kindly follow the instructions below to install the laravel code
             'password' => Hash::make('user123'),
 
 #### API Sync Data to database table
-- Run: php artisan app:sync-api-data 
+
+php artisan app:sync-api-data 
