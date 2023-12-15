@@ -26,6 +26,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('index')->
 Route::get('/admin-dashboard', [DashboardController::class, 'admin'])->name('admin')->middleware('auth', 'is_admin');
 Route::get('/user-dashboard', [DashboardController::class, 'user'])->name('user')->middleware('auth', 'is_user');
 
+Route::get('/import-csv-file', [CsvImportController::class, 'create'])->name('new.csv')->middleware('auth', 'is_user');
 Route::post('/import-csv', [CsvImportController::class, 'store'])->name('import.csv')->middleware('auth', 'is_user');
 
 Route::get('/api-records', [DashboardController::class, 'apiRecords'])->name('api.records')->middleware('auth', 'is_admin');

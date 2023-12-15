@@ -22,7 +22,7 @@ class CsvImportController extends Controller
      */
     public function create()
     {
-        //
+        return view('import.new');
     }
 
     /**
@@ -57,7 +57,7 @@ class CsvImportController extends Controller
         }
 
         // Redirect to the homepage
-        return redirect()->back()->with(['success' => 'CSV file imported successfully!']);
+        return redirect()->route('admin')->with(['success' => 'CSV file imported successfully!']);
     }
 
     /**
