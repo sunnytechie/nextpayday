@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.vue')
 @section('content')
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-md-12 my-4">
                 <h2>Administrator.</h2>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
 
-                    <!-- Modal -->
+
                     <div class="modal fade" id="uploadCSV" tabindex="-1" aria-labelledby="uploadCSVLabel" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
@@ -40,7 +40,6 @@
                                 </div>
 
                                 <div class="modal-footer">
-                                    {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
                                     <button type="submit" class="btn btn-primary rounded-0">Import csv</button>
                                 </div>
 
@@ -74,6 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <csv-component></csv-component>
 @endsection
 
