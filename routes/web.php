@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CsvImportController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
@@ -38,11 +37,5 @@ Route::post('/jobs/send-email-to-active-users', [JobController::class, 'sendEmai
 //Exception Handling
 Route::get('/404', [ExceptionsController::class, 'notFound'])->name('404');
 Route::get('/500', [ExceptionsController::class, 'internalServerError'])->name('500');
-
-//Route::middleware('auth')->group(function () {
-//    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-//});
 
 require __DIR__.'/auth.php';

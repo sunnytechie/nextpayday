@@ -31,7 +31,7 @@ composer update
 
 php artisan migrate
 
-php artisan db:seed
+php artisan db:seed --class=UsersSeeder
 
 php artisan app:sync-api-data 
 
