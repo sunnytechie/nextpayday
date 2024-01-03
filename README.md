@@ -35,6 +35,6 @@ php artisan db:seed --class=UsersSeeder
 
 php artisan app:sync-api-data 
 
-npn install
+npm install
 
 npm run dev
